@@ -1,0 +1,22 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:postgresql://dpg-d0ainq0dl3ps73ebi1sg-a.oregon-postgres.render.com:5432/wefit
+    username: wefit_user
+    password: 26owWLC0XoIN7KqS6S5PIZY0PS4Utoek
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate.format_sql: true
+
+  kafka:
+    bootstrap-servers: ${SPRING_KAFKA_BOOTSTRAP_SERVERS:kafka:9092}
+
+logging:
+  level:
+    org.springframework: INFO
